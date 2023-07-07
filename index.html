@@ -53,11 +53,19 @@
 	    document.getElementById("countdown").innerHTML = "EXPIRED";
 	  }
 	}, 1000);
+
+	const set_bimentor_title = setInterval(function() {
+		var emojis = ['🎾', '✍️', '🎸', '♟️', '💃', '⛵', '🎹', '🥁', '🏃', '🥐', '🎱', '🪗'];
+		var random_index = ~~(Math.random()*emojis.length);
+		var random_emoji = emojis[random_index];
+        document.getElementById('emoji').innerHTML = random_emoji;
+ 	}, 1500);
 	</script>
 	<div id="container">
-			<h1>bimentor</h1>
+	<h1 id="title">bimentor</h1>
 	<p>Study together with your <strong>new friend</strong> and take turns teaching each other about topics you both know well, so you can learn new things while sharing your expertise.</p>
 	<p id="countdown"></p>
+	<p id="emoji"></p>
 	</div>
 </body>
 </html>
